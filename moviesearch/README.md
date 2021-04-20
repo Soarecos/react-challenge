@@ -26,8 +26,9 @@ After that install all the dependencies:
 <br>
 -> Open the terminal on this folder and type: 'npm install';
 <br>
+-> Open the '.env' file and change the OMDb API key to yours;
 <br>
-After the installation is done, you can start looking to your project typing on the trminal "npm start", and it will create a local server to run the project.
+After the installation is done, you can start looking to your project typing on the terminal "npm start", and it will create a local server to run the project.
 <br>
 <br>
 After this your project is ready to run! 🎉
