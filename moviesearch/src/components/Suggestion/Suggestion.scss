@@ -1,0 +1,16 @@
+@import "../../utilities/variables.scss";
+
+.searchSuggestion {
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+
+    &-title {
+        color: $white;
+    }
+
+    &-description {
+        color: $light-grey;
+    }
+}

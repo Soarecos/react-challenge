@@ -1,0 +1,20 @@
+@import "./utilities/variables.scss";
+
+.App {
+  text-align: center;
+
+  &-header {
+    color  : $white;
+    display: flex;
+    margin : 1.5rem 0;
+  }
+
+  &-logo {
+    float: left;
+  }
+
+  .error{
+    font-size: 1.5rem;
+    color: $white;
+  }
+}

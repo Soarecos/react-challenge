@@ -1,0 +1,176 @@
+@import "../../utilities/variables.scss";
+
+.movieDetails {
+    .go-back {
+        cursor    : pointer;
+        transition: all ease .2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .movieDetails-time {
+        span {
+            position    : relative;
+            margin-right: 1rem;
+            color       : $light-grey;
+            font-size   : 1.25rem;
+
+            &:first-child::before {
+                display: none;
+            }
+
+            &:before {
+                content  : '•';
+                position : absolute;
+                left     : -12px;
+                top      : 50%;
+                transform: translateY(-50%);
+                color    : $light-grey;
+            }
+        }
+
+        .movieDetails-time--real {
+            background-color: $light-grey;
+            color           : $grey;
+            font-weight     : 600;
+            border-radius   : 4px;
+            padding         : 4px 7px 3px 7px;
+            font-size       : 1rem;
+        }
+    }
+
+    .movieDetails-title {
+        color    : $white;
+        font-size: 1.5rem;
+    }
+
+    div[class*="movieDetails-classification--"] {
+        display      : inline-block;
+        margin-right : 1rem;
+        border       : 1px solid $grey;
+        border-radius: 4px;
+        color        : $white;
+    }
+
+    .movieDetails-classification-text {
+        display: inline-block;
+    }
+
+    .movieDetails-classification--imdb {
+        .movieDetails-classification-image {
+            background               : $yellow;
+            padding                  : .5rem .75rem .5rem .75rem;
+            display                  : inline-block;
+            border-top-left-radius   : 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .movieDetails-classification-text {
+            padding  : 0 .5rem;
+            font-size: .95rem;
+        }
+    }
+
+    .movieDetails-classification--rotten {
+        .movieDetails-classification-image {
+            background               : $red;
+            padding                  : .5rem .75rem .5rem .75rem;
+            display                  : inline-block;
+            border-top-left-radius   : 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .movieDetails-classification-text {
+            padding  : 0 .5rem;
+            font-size: .95rem;
+        }
+    }
+
+    .movieDetails-classification--fav {
+        background   : transparent;
+        outline      : none;
+        border       : 1px solid $grey;
+        border-radius: 4px;
+        color        : $light-grey;
+        padding      : .5rem 1rem;
+        transition   : all ease .2s;
+        font-weight  : 500;
+
+        &.active,
+        &:hover {
+            background: $red;
+            color     : $white;
+
+            i:before {
+                content: '\f004'
+            }
+        }
+
+        .movieDetails-classification-text {
+            margin-left: 0;
+            font-size  : .95rem;
+
+            i {
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    .movieDetails-information {
+        max-width: 100%;
+
+        .movieDetails-plot {
+
+            &-title {
+                color: $light-grey;
+            }
+
+            &-description {
+                color      : $white;
+                font-weight: 100;
+            }
+        }
+
+        .movieDetails-type {
+            &-title {
+                color: $light-grey;
+            }
+
+            &-description {
+                color      : $white;
+                font-weight: 100;
+                list-style : none;
+                padding    : 0;
+            }
+        }
+    }
+
+    .movieDetails-thumbnail {
+        border-radius: 8px;
+        max-height   : 300px;
+        margin       : 0 auto;
+        display      : block;
+    }
+}
+
+@media (min-width: 768px) {
+    .movieDetails {
+
+        .movieDetails-information {
+            max-width: 80%;
+        }
+
+        .movieDetails .movieDetails-title {
+            font-size: 5rem;
+        }
+        .movieDetails-classification--fav {
+            width: auto;
+        }
+
+        .movieDetails-thumbnail {
+            max-height: 700px;
+        }
+    }
+}

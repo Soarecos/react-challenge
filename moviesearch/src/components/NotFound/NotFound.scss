@@ -1,0 +1,26 @@
+@import "../../utilities/variables.scss";
+
+.notFound-title{
+    color: $white;
+}
+
+.notFound-btn{
+    background: transparent;
+    border: 1px solid $white;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    color: $white;
+    transition: all ease .2s;
+    &:hover{
+        background: $yellow;
+        border-color: $yellow;
+    }
+}
+
+@media (min-width: 768px) {
+    .notFound-img{
+        max-width: 740px !important;
+        right: -60px;
+        position: relative;
+    }
+}
